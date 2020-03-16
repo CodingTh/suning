@@ -1,0 +1,446 @@
+@import './base.less';
+
+
+.view{
+    margin-bottom: 64px;
+    background-color: #fff;
+    // 头部 begin
+    .header{
+        position: fixed;
+        left: 0;
+        top:0;
+        z-index: 999;
+        overflow: hidden;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        background-color: #FFA500;
+        .type{
+            width: 50px;
+            
+            a{
+                // 这里居中困难
+               display: block;
+               width: 44px/2;
+               height:70px/2;
+            //    为什么这里用padding不起作用
+               margin:3px 0px 0px 15px;
+               background: url(../images/category.png) no-repeat;
+               background-size: 44px/2 70px/2;
+            }
+        }
+        .search{
+            flex: 1;
+            // 这里设置了高度???
+            height: 30px;
+            margin:5px 0;
+            // 这里设置margin上下总是不等高，可能是base文件引起
+            // line-height: 1.15;
+            input{
+                width: 100%;
+                height: 100%;
+                border-radius: 23px;
+            }
+        }
+        .login{
+            width: 40px;
+            text-align: center;
+            a{
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                font-size: 12px;
+                color: #fff;
+            }
+        }
+    }
+    // 头部 end
+
+    // banner begin
+    .banner{
+        a{
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    // banner end
+
+    // 导航栏 beign
+    .nav{
+        width: 100%;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            padding:.15625rem 0;
+            li{
+                width: 20%;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img{
+                        width: 50%;
+                    }
+                    span{
+                        display: block;
+                        font-size: .375rem;
+                        color: #666;
+                    }
+                }
+                &:nth-child(-n+5){
+                    margin-bottom: .3125rem;
+                }
+            }
+        }
+    }
+
+    // 导航栏 end
+
+    // 好物 beign
+    .good_thing_top{
+        width: 100%;
+        background-color: #2C14D0;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                border-radius: 10px;
+                &:nth-child(-n+4){
+                    width: 50%;
+                    a{
+                        img{
+                          width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .good_thing_bottom{
+        width:100%;
+        display: flex;
+        flex-direction:row;
+        a{
+            flex: 1;
+            position: relative;
+            >img{
+                width: 100%;
+            }
+            .thing{
+                text-align: center;
+                >img{
+                   position: absolute; 
+                   left: 25%;
+                   top: 10%;           
+                   width: 50%;
+                }
+                p{
+                   position: absolute; 
+                   left: 15%;
+                   bottom: 5%;
+                   color: #fff;
+                   font-size: .375rem;
+                }
+            }
+        } 
+    }
+    // 好物 end
+
+    // 每日必逛 begin
+    .day_go{
+        background-color: #F2F2F2;
+        padding-bottom: .3125rem;
+        .day_go_hd{
+            img{
+                width: 100%;
+            }
+        }
+        .day_go_bd{
+            // 使用margin制造间隙不能有宽度
+            margin:0 .15625rem;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                background-color: #fff;
+                border-radius: .15625rem;
+                li{
+                    width: 50%;
+                    &:nth-child(-n+2){
+                        border-bottom: .03125rem solid #CCCCCC;
+                    }
+                    &:nth-child(2n){
+                        border-left: .03125rem solid #CCCCCC;
+                    }
+                    >div{
+                        padding:.15625rem 0 .46875rem .15625rem;
+                        h5{
+                            font-size: .375rem;
+                            font-weight: 400;
+                        }
+                        P{
+                            font-size: .375rem;
+                            color: #666;
+                        }
+                        img{
+                            display: inline-block;
+                            width: 45%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 每日必逛 end
+
+    //  广告 begin
+    .adv{
+        padding:.3125rem;
+        background-color: #F2F2F2;
+        a{
+            img{
+                width: 100%;
+                border-radius: .625rem;
+            }
+        }
+    }
+
+    // 广告 end
+
+    // 酷玩潮流 begin
+    .play{
+        background-color: #F2F2F2;
+        .play_hd{
+            img{
+                width: 100%;
+            }
+        }
+        .play_bd{
+            margin:0 .15625rem;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                background-color: #fff;
+                border-radius: .15625rem;
+                li{
+                    width: 50%;
+                    &:nth-child(-n+4){
+                        border-bottom: .03125rem solid #CCCCCC;
+                    }
+                    &:nth-child(2n){
+                        border-left: .03125rem solid #CCCCCC;
+                    }
+                    div{
+                        padding:.15625rem 0 .46875rem .15625rem;
+                        h5{
+                            font-size: .375rem;
+                            font-weight: 400;
+                        }
+                        P{
+                            font-size: .375rem;
+                            color: #666;
+                        }
+                        img{
+                            display: inline-block;
+                            width: 45%;
+                        }
+                    }
+                    &:first-child{
+                        position: relative;
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            padding:0;
+                            p{
+                                position: absolute;
+                                left: 5%;
+                                top: 5%;
+                                color: #fff;
+                            }
+                            img{
+                                //图片铺满盒子需给父盒子添加宽高
+                                width: 100%; 
+                                height:100%;
+                                border-top-left-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }  
+        }
+    }
+    // 酷玩潮流 end
+
+    // 生活风尚 begin
+    .life{
+        padding-bottom: .3125rem;
+        background-color: #F2F2F2;
+        .life_hd{
+            img{
+                width: 100%;
+            }
+        }
+        .life_bd{
+            margin:0 .15625rem;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                border-radius: .15625rem;
+                background-color: #fff;
+                li{
+                    width: 50%;
+                    &:nth-child(-n+2){
+                        border-bottom: .03125rem solid #CCCCCC;
+                    }
+                    &:nth-child(2n){
+                        border-left: .03125rem solid #CCCCCC;
+                    }
+                    div{
+                        padding:.15625rem 0 .46875rem .15625rem;
+                        h5{
+                            font-size: .375rem;
+                            font-weight: 400;
+                        }
+                        P{
+                            font-size: .375rem;
+                            color: #666;
+                        }
+                        img{
+                            display: inline-block;
+                            width: 45%;
+                        }
+                    }
+                    // 后4个
+                    &:nth-last-child(-n+4){
+                        border-top: .03125rem solid #CCCCCC;
+                        width: 25%;
+                        h5{
+                            // 这里不使用rem随屏幕适应字体
+                            font-size: 24px;
+                            font-weight: 400;
+                        }
+                        P{
+                            // 这里不使用rem随屏幕适应字体
+                            font-size: 24px;
+                            color: #666;
+                        }
+                        img{
+                            display: inline-block;
+                            width: 100%;
+                        }
+                    }
+                    &:nth-child(7){
+                        border-left: .03125rem solid #CCCCCC;
+                    }
+                }
+            }
+        }
+    }
+    // 生活风尚 end
+
+    // 西式厨房广告 begin
+    .adv_kitchen{
+        width: 100%;
+        a{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    // 西式厨房广告 end
+
+    // 猜你喜欢 begin
+    .like{
+        background-color: #f2f2f2;
+       .like_hd{
+           img{
+               width: 100%;
+           }
+       } 
+       .like_bd{
+           margin:0 .15625rem;
+           ul{
+               display: flex;
+               flex-wrap: wrap;
+               li{
+                   width: 49%;
+                   margin-bottom: .15625rem;
+                   padding:.15625rem;
+                   text-align: center;
+                   background-color: #fff;
+                   border-radius: 10px;
+                   &:nth-child(2n){
+                       margin-left: .15625rem;
+                   }
+                   a{
+                      img{
+                          width:100%;
+                          margin-top: .15625rem;
+                      }
+                      p{
+                          &:nth-child(2){
+                            //   多行文本显示省略号
+                             display: -webkit-box;
+                              font-size: .375rem;
+                              color: #000;
+                              overflow: hidden;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              text-overflow: ellipsis;
+                          }
+                          &:last-child{
+                              text-align: left;
+                              font-size: .5rem;
+                              color: #FF0000;
+                          }
+
+                      }
+                   }
+               }
+           }
+       }
+    }
+
+    // 猜你喜欢 end
+
+    // 页脚 begin
+    .footer{
+        position: fixed;
+        left:0;
+        bottom: 0;
+        width: 100%;
+        // 固定高度
+        height: 64px;
+        background-color: #fff;
+        .menu{
+            width: 100%;
+            ul{
+                display: flex;
+                text-align: center;
+                li{
+                    // 为什么flex=1没有排列整齐了
+                    flex: 1;
+                    a{
+                        height: 64px;
+                        img{
+                            width: 32px;
+                            height: 32px;
+                        }
+                        span{
+                            display: block;
+                            font-size: 14px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 页脚 end
+}
